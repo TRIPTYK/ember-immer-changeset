@@ -4,6 +4,8 @@
 /dist/
 /tmp/
 
+declarations
+
 # dependencies
 /bower_components/
 /node_modules/

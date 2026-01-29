@@ -29,21 +29,18 @@
     "prepack": "ember ts:precompile",
     "postpack": "rm -rf utils && rm -rf components && rm index.d.ts"
   },
-  "peerDependencies": {
-    "ember-source": "^4.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-decorators": "^7.23.3",
     "@ember/optional-features": "^2.0.0",
-    "@ember/test-helpers": "^3.2.0",
+    "@ember/test-helpers": "^4.0.0",
     "@embroider/compat": "^3.2.3",
     "@embroider/core": "^3.3.0",
     "@embroider/test-setup": "^3.0.2",
     "@embroider/webpack": "^3.2.0",
-    "@glimmer/component": "^1.1.2",
-    "@glimmer/tracking": "^1.1.2",
+    "@glimmer/component": "~2.0.0",
+    "@glimmer/tracking": "~1.1.2",
     "@tsconfig/ember": "^3.0.2",
     "@types/ember": "^4.0.6",
     "@types/ember__application": "^4.0.8",
@@ -87,7 +84,7 @@
     "ember-page-title": "^8.0.0",
     "ember-qunit": "^8.0.1",
     "ember-resolver": "^11.0.1",
-    "ember-source": "~5.12.0",
+    "ember-source": "~6.4.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^5.11.2",
     "ember-try": "^3.0.0",
@@ -107,8 +104,8 @@
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.0.2",
     "type-fest": "^4.8.2",
-    "typescript": "^5.3.2",
-    "webpack": "^5.89.0",
+    "typescript": "~5.9.3",
+    "webpack": "~5.104.1",
     "webpack-bundle-analyzer": "^4.8.0"
   },
   "engines": {

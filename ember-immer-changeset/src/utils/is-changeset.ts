@@ -1,4 +1,4 @@
-import ImmerChangeset from '../changeset/immer-changeset';
+import ImmerChangeset from '../changeset/immer-changeset.ts';
 
 export default function isChangeset(obj?: InstanceType<any>) {
   if (!obj) {
