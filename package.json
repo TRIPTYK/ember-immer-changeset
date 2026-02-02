@@ -1,6 +1,6 @@
 {
   "name": "ember-immer-changeset-root",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "private": true,
   "repository": "https://github.com/TRIPTYK/ember-immer-changeset",
   "license": "MIT",
@@ -19,15 +19,15 @@
     "prepare": "pnpm build",
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "pnpm --filter ember-immer-changeset start",
-    "start:test-app": "pnpm --filter test-app start",
+    "start:": "pnpm --filter  start",
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@10.28.2",
   "volta": {
-    "node": "20.18.0",
-    "pnpm": "9.12.1"
+    "node": "22.22.0",
+    "pnpm": "10.28.2"
   }
 }

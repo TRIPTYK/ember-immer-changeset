@@ -1,4 +1,4 @@
-import EmberRouter from '@ember/routing/router';
+import EmberRouter from '@embroider/router';
 import config from 'test-app/config/environment';
 
 export default class Router extends EmberRouter {
@@ -7,8 +7,5 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('articles', function () {
-    this.route('edit', { path: '/edit/:id' });
-    this.route('create');
-  });
+  // Add route declarations here
 });

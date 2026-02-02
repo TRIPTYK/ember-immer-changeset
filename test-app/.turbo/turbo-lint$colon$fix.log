@@ -1,0 +1,125 @@
+
+
+> test-app@0.0.0 lint:fix /Users/amauryd/Projects/ember-common-ui/test-app
+> concurrently "pnpm:lint:*:fix" --names "fix:" --prefixColors auto && pnpm format
+
+[33m[fix:js][39m
+[33m[fix:js][39m > test-app@0.0.0 lint:js:fix /Users/amauryd/Projects/ember-common-ui/test-app
+[33m[fix:js][39m > eslint . --fix
+[33m[fix:js][39m
+[36m[fix:hbs][39m
+[36m[fix:hbs][39m > test-app@0.0.0 lint:hbs:fix /Users/amauryd/Projects/ember-common-ui/test-app
+[36m[fix:hbs][39m > ember-template-lint . --fix
+[36m[fix:hbs][39m
+[36m[fix:hbs][39m Linting 87 Total Files with TemplateLint
+[36m[fix:hbs][39m 	.ts: 30
+[36m[fix:hbs][39m 	.js: 3
+[36m[fix:hbs][39m 	.gts: 53
+[36m[fix:hbs][39m 	.hbs: 1
+[36m[fix:hbs][39m
+[36m[fix:hbs][39m
+[36m[fix:hbs][39m [0mpnpm run lint:hbs:fix exited with code 0[0m
+[33m[fix:js][39m [0mpnpm run lint:js:fix exited with code 0[0m
+
+> test-app@0.0.0 format /Users/amauryd/Projects/ember-common-ui/test-app
+> prettier . --cache --write
+
+.editorconfig[2K[1G.ember-cli[2K[1G.env.development[2K[1G.gitignore[2K[1G.prettierignore[2K[1G.prettierrc.mjs[2K[1G[90m.prettierrc.mjs[39m 0ms (unchanged) (cached)
+.template-lintrc.mjs[2K[1G[90m.template-lintrc.mjs[39m 0ms (unchanged) (cached)
+.watchmanconfig[2K[1G[90m.watchmanconfig[39m 0ms (unchanged) (cached)
+app/app.ts[2K[1G[90mapp/app.ts[39m 0ms (unchanged) (cached)
+app/components/.gitkeep[2K[1Gapp/components/dummy-form.gts[2K[1G[90mapp/components/dummy-form.gts[39m 0ms (unchanged) (cached)
+app/components/dummy-input.hbs[2K[1G[90mapp/components/dummy-input.hbs[39m 0ms (unchanged) (cached)
+app/components/dummy-input.ts[2K[1G[90mapp/components/dummy-input.ts[39m 0ms (unchanged) (cached)
+app/components/dummy-label-select.gts[2K[1G[90mapp/components/dummy-label-select.gts[39m 0ms (unchanged) (cached)
+app/config/environment.ts[2K[1G[90mapp/config/environment.ts[39m 0ms (unchanged) (cached)
+app/controllers/.gitkeep[2K[1Gapp/deprecation-workflow.ts[2K[1G[90mapp/deprecation-workflow.ts[39m 0ms (unchanged) (cached)
+app/helpers/.gitkeep[2K[1Gapp/helpers/catch-state.ts[2K[1G[90mapp/helpers/catch-state.ts[39m 0ms (unchanged) (cached)
+app/helpers/to-string.ts[2K[1G[90mapp/helpers/to-string.ts[39m 0ms (unchanged) (cached)
+app/models/.gitkeep[2K[1Gapp/models/user.ts[2K[1G[90mapp/models/user.ts[39m 0ms (unchanged) (cached)
+app/router.ts[2K[1G[90mapp/router.ts[39m 0ms (unchanged) (cached)
+app/routes/.gitkeep[2K[1Gapp/routes/application.ts[2K[1G[90mapp/routes/application.ts[39m 0ms (unchanged) (cached)
+app/services/.gitkeep[2K[1Gapp/services/catch-state.ts[2K[1G[90mapp/services/catch-state.ts[39m 0ms (unchanged) (cached)
+app/services/store.ts[2K[1G[90mapp/services/store.ts[39m 0ms (unchanged) (cached)
+app/services/tpk-form.ts[2K[1G[90mapp/services/tpk-form.ts[39m 0ms (unchanged) (cached)
+app/styles/app.css[2K[1G[90mapp/styles/app.css[39m 13ms (unchanged)
+app/templates/application.gts[2K[1G[90mapp/templates/application.gts[39m 29ms (unchanged)
+babel.config.cjs[2K[1G[90mbabel.config.cjs[39m 0ms (unchanged) (cached)
+config/environment.js[2K[1G[90mconfig/environment.js[39m 0ms (unchanged) (cached)
+config/optional-features.json[2K[1G[90mconfig/optional-features.json[39m 0ms (unchanged) (cached)
+config/targets.js[2K[1G[90mconfig/targets.js[39m 0ms (unchanged) (cached)
+ember-cli-build.cjs[2K[1G[90member-cli-build.cjs[39m 0ms (unchanged) (cached)
+eslint.config.mjs[2K[1G[90meslint.config.mjs[39m 0ms (unchanged) (cached)
+package.json[2K[1G[90mpackage.json[39m 10ms (unchanged)
+public/robots.txt[2K[1GREADME.md[2K[1G[90mREADME.md[39m 0ms (unchanged) (cached)
+testem.cjs[2K[1G[90mtestem.cjs[39m 0ms (unchanged) (cached)
+tests/helpers/index.ts[2K[1G[90mtests/helpers/index.ts[39m 0ms (unchanged) (cached)
+tests/integration/.gitkeep[2K[1Gtests/integration/components/ember-input-validation/generic-test-functions/assert-data-has-error-attribute.ts[2K[1G[90mtests/integration/components/ember-input-validation/generic-test-functions/assert-data-has-error-attribute.ts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/generic-test-functions/assert-tpk-css-classes-exist.ts[2K[1G[90mtests/integration/components/ember-input-validation/generic-test-functions/assert-tpk-css-classes-exist.ts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/generic-test-functions/initialize-params-tpk-form.ts[2K[1G[90mtests/integration/components/ember-input-validation/generic-test-functions/initialize-params-tpk-form.ts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/generic-test-functions/setup-prefab-component.gts[2K[1G[90mtests/integration/components/ember-input-validation/generic-test-functions/setup-prefab-component.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-bic-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-bic-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-checkbox-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-checkbox-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-currency-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-currency-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-datepicker-range-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-datepicker-range-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-datepicker-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-datepicker-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-email-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-email-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-file-list-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-file-list-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-file-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-file-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-iban-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-iban-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-input-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-input-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-integer-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-integer-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-mobile-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-mobile-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-national-number-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-national-number-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-number-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-number-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-password-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-password-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-radio-group-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-radio-group-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-radio-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-radio-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-select-create-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-select-create-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-select-search-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-select-search-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-select-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-select-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-textarea-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-textarea-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-timepicker-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-timepicker-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/prefabs/tpk-validation-vat-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/prefabs/tpk-validation-vat-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-attributes-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-attributes-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-error-scroll-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-error-scroll-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-form-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-form-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-form-vitest-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-form-vitest-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-validation-input-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-validation-input-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-validation-radio-group-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-validation-radio-group-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-validation-radio-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-validation-radio-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input-validation/tpk-validation-textarea-test.gts[2K[1G[90mtests/integration/components/ember-input-validation/tpk-validation-textarea-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/helpers/datepicker-test.gts[2K[1G[90mtests/integration/components/ember-input/helpers/datepicker-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/prefabs/tpk-button-test.gts[2K[1G[90mtests/integration/components/ember-input/prefabs/tpk-button-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/prefabs/tpk-search-test.gts[2K[1G[90mtests/integration/components/ember-input/prefabs/tpk-search-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/prefabs/tpk-toggle-test.gts[2K[1G[90mtests/integration/components/ember-input/prefabs/tpk-toggle-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-button-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-button-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-checkbox-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-checkbox-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-datepicker-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-datepicker-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-file-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-file-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-input-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-input-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-input-textarea-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-input-textarea-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-input/tpk-radio-test.gts[2K[1G[90mtests/integration/components/ember-input/tpk-radio-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/action-menu-test.gts[2K[1G[90mtests/integration/components/ember-ui/action-menu-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/confirm-modal-test.gts[2K[1G[90mtests/integration/components/ember-ui/confirm-modal-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/modal-test.gts[2K[1G[90mtests/integration/components/ember-ui/modal-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/prefabs/tpk-confirm-modal-prefab-test.gts[2K[1G[90mtests/integration/components/ember-ui/prefabs/tpk-confirm-modal-prefab-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/prefabs/tpk-table-generic-prefab-test.gts[2K[1G[90mtests/integration/components/ember-ui/prefabs/tpk-table-generic-prefab-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/stack-list-test.gts[2K[1G[90mtests/integration/components/ember-ui/stack-list-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/table-generic/component-test.gts[2K[1G[90mtests/integration/components/ember-ui/table-generic/component-test.gts[39m 0ms (unchanged) (cached)
+tests/integration/components/ember-ui/table-generic/data/fake-data.ts[2K[1G[90mtests/integration/components/ember-ui/table-generic/data/fake-data.ts[39m 0ms (unchanged) (cached)
+tests/pages/ember-actions-menu.ts[2K[1G[90mtests/pages/ember-actions-menu.ts[39m 0ms (unchanged) (cached)
+tests/pages/ember-confirm-modal.ts[2K[1G[90mtests/pages/ember-confirm-modal.ts[39m 0ms (unchanged) (cached)
+tests/pages/tpk-search.ts[2K[1G[90mtests/pages/tpk-search.ts[39m 0ms (unchanged) (cached)
+tests/pages/tpk-select-new.ts[2K[1G[90mtests/pages/tpk-select-new.ts[39m 0ms (unchanged) (cached)
+tests/pages/tpk-select-search.ts[2K[1G[90mtests/pages/tpk-select-search.ts[39m 0ms (unchanged) (cached)
+tests/pages/tpk-select.ts[2K[1G[90mtests/pages/tpk-select.ts[39m 0ms (unchanged) (cached)
+tests/test-helper.ts[2K[1G[90mtests/test-helper.ts[39m 0ms (unchanged) (cached)
+tests/unit/.gitkeep[2K[1Gtests/unit/ember-input-validation/utils/clear-object-test.ts[2K[1G[90mtests/unit/ember-input-validation/utils/clear-object-test.ts[39m 0ms (unchanged) (cached)
+tests/unit/ember-input-validation/utils/is-field-error-test.ts[2K[1G[90mtests/unit/ember-input-validation/utils/is-field-error-test.ts[39m 0ms (unchanged) (cached)
+tests/unit/ember-input-validation/utils/validate-and-map-test.ts[2K[1G[90mtests/unit/ember-input-validation/utils/validate-and-map-test.ts[39m 0ms (unchanged) (cached)
+tests/unit/routes/application-test.ts[2K[1G[90mtests/unit/routes/application-test.ts[39m 0ms (unchanged) (cached)
+tests/worker.ts[2K[1G[90mtests/worker.ts[39m 0ms (unchanged) (cached)
+tests/workers/table-generic.ts[2K[1G[90mtests/workers/table-generic.ts[39m 0ms (unchanged) (cached)
+tsconfig.json[2K[1G[90mtsconfig.json[39m 0ms (unchanged) (cached)
+vite.config.mjs[2K[1G[90mvite.config.mjs[39m 0ms (unchanged) (cached)

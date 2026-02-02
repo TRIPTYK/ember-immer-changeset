@@ -1,0 +1,33 @@
+
+> test-app@0.0.0 lint /Users/amauryd/Projects/ember-common-ui/test-app
+> concurrently "pnpm:lint:*(!fix)" --names "lint:" --prefixColors auto
+
+[lint:hbs]
+[lint:hbs] > test-app@0.0.0 lint:hbs /Users/amauryd/Projects/ember-common-ui/test-app
+[lint:hbs] > ember-template-lint .
+[lint:hbs]
+[lint:js]
+[lint:js] > test-app@0.0.0 lint:js /Users/amauryd/Projects/ember-common-ui/test-app
+[lint:js] > eslint . --cache
+[lint:js]
+[lint:types]
+[lint:types] > test-app@0.0.0 lint:types /Users/amauryd/Projects/ember-common-ui/test-app
+[lint:types] > ember-tsc
+[lint:types]
+[lint:format]
+[lint:format] > test-app@0.0.0 lint:format /Users/amauryd/Projects/ember-common-ui/test-app
+[lint:format] > prettier . --cache --check
+[lint:format]
+[lint:format] Checking formatting...
+[lint:hbs] Linting 87 Total Files with TemplateLint
+[lint:hbs] 	.ts: 30
+[lint:hbs] 	.js: 3
+[lint:hbs] 	.gts: 53
+[lint:hbs] 	.hbs: 1
+[lint:hbs]
+[lint:format] All matched files use Prettier code style!
+[lint:format] pnpm run lint:format exited with code 0
+[lint:hbs]
+[lint:hbs] pnpm run lint:hbs exited with code 0
+[lint:types] pnpm run lint:types exited with code 0
+[lint:js] pnpm run lint:js exited with code 0
