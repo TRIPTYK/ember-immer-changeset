@@ -1,13 +1,20 @@
-import Application from 'test-app/app';
-import config from 'test-app/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
-import 'qunit-dom';
 import { setup } from 'qunit-dom';
-import { start } from 'ember-qunit';
+import { start as qunitStart, setupEmberOnerrorValidation } from 'ember-qunit';
+import { setupGlobalA11yHooks } from 'ember-a11y-testing/test-support';
+import { setupWorker } from './worker';
+import config from 'test-app/config/environment';
+import Application from 'test-app/app';
 
-setApplication(Application.create(config.APP));
+export function start() {
+  setApplication(Application.create(config.APP));
 
-setup(QUnit.assert);
+  setup(QUnit.assert);
+  setupEmberOnerrorValidation();
+  setupGlobalA11yHooks(() => true);
 
-start();
+  setupWorker();
+
+  qunitStart();
+}

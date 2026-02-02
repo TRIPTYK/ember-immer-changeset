@@ -1,0 +1,28 @@
+
+
+> test-app@0.0.0 build /Users/amauryd/Projects/ember-common-ui/test-app
+> vite build
+
+[33m[33mYou are using Node.js 20.18.0. Vite requires Node.js version 20.19+ or 22.12+. Please upgrade your Node.js version.[39m[39m
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+/Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/ember-cli@6.10.0_@types+node@25.0.10_ejs@3.1.10_handlebars@4.7.8_underscore@1.13.7/node_modules/ember-cli/lib/models/project.js:8
+const { findUpSync } = require('find-up');
+                       ^
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/find-up@8.0.0/node_modules/find-up/index.js from /Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/ember-cli@6.10.0_@types+node@25.0.10_ejs@3.1.10_handlebars@4.7.8_underscore@1.13.7/node_modules/ember-cli/lib/models/project.js not supported.
+Instead change the require of index.js in /Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/ember-cli@6.10.0_@types+node@25.0.10_ejs@3.1.10_handlebars@4.7.8_underscore@1.13.7/node_modules/ember-cli/lib/models/project.js to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (/Users/amauryd/Projects/ember-common-ui/node_modules/[4m.pnpm[24m/ember-cli@6.10.0_@types+node@25.0.10_ejs@3.1.10_handlebars@4.7.8_underscore@1.13.7/node_modules/[4member-cli[24m/lib/models/project.js:8:24) {
+  code: [32m'ERR_REQUIRE_ESM'[39m
+}
+
+Node.js v20.18.0
+[31m[31merror during build:
+TypeError: Cannot destructure property 'stack' of 'e$1' as it is undefined.
+    at extractStack (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33573:10)
+    at enhanceRollupError (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33559:20)
+    at buildEnvironment (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33547:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.build (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33900:19)
+    at async Object.buildApp (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33897:153)
+    at async CAC.<anonymous> (file:///Users/amauryd/Projects/ember-common-ui/node_modules/.pnpm/vite@7.3.1_@types+node@25.0.10_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2/node_modules/vite/dist/node/cli.js:629:3)[39m[39m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 1.[39m

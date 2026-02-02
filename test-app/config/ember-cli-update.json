@@ -2,16 +2,16 @@
   "schemaVersion": "1.0.0",
   "packages": [
     {
-      "name": "ember-cli",
-      "version": "5.3.0",
+      "name": "@ember/app-blueprint",
+      "version": "6.9.1",
       "blueprints": [
         {
-          "name": "addon",
-          "outputRepo": "https://github.com/ember-cli/ember-addon-output",
-          "codemodsSource": "ember-addon-codemods-manifest@1",
+          "name": "@ember/app-blueprint",
           "isBaseBlueprint": true,
           "options": [
-            "--yarn"
+            "--pnpm",
+            "--ci-provider=github",
+            "--typescript"
           ]
         }
       ]

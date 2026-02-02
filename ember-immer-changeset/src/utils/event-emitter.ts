@@ -1,11 +1,11 @@
-import type { StringKeyOf } from 'type-fest';
+import type { KeyAsString } from 'type-fest';
 import type ImmerChangeset from '../changeset/immer-changeset';
 import type { Changeset } from '../types/changeset';
 
 export type OnSetCallback<
   T extends Changeset,
   DTO extends Record<string, any>,
-> = (key: StringKeyOf<DTO>, value: unknown, changeset: T) => void;
+> = (key: KeyAsString<DTO>, value: unknown, changeset: T) => void;
 
 interface EventMap<T extends ImmerChangeset, DTO extends Record<string, any>> {
   set: Map<Symbol, OnSetCallback<T, DTO>>;
@@ -14,7 +14,7 @@ interface EventMap<T extends ImmerChangeset, DTO extends Record<string, any>> {
 type MapValue<
   T extends ImmerChangeset,
   DTO extends Record<string, any>,
-  K extends StringKeyOf<EventMap<T, DTO>>,
+  K extends KeyAsString<EventMap<T, DTO>>,
 > = EventMap<T, DTO>[K] extends Map<Symbol, infer Callback> ? Callback : never;
 
 export default class ChangesetEventEmitter<
@@ -27,13 +27,13 @@ export default class ChangesetEventEmitter<
 
   public constructor(private changeset: T) {}
 
-  public emitOnSet<K extends StringKeyOf<DTO>>(key: K, value: DTO[K]) {
+  public emitOnSet<K extends KeyAsString<DTO>>(key: K, value: DTO[K]) {
     this.events['set'].forEach((callback) =>
       callback(key, value, this.changeset),
     );
   }
 
-  on<K extends StringKeyOf<EventMap<T, DTO>>>(
+  on<K extends KeyAsString<EventMap<T, DTO>>>(
     event: K,
     callback: MapValue<T, DTO, K>,
   ): Symbol {
@@ -42,7 +42,7 @@ export default class ChangesetEventEmitter<
     return uniqueId;
   }
 
-  off<K extends StringKeyOf<EventMap<T, DTO>>>(
+  off<K extends KeyAsString<EventMap<T, DTO>>>(
     event: K,
     uniqueId: Symbol,
   ): void {

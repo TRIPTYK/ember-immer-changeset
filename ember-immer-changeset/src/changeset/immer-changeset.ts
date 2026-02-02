@@ -1,4 +1,4 @@
-import type { Get, Promisable, StringKeyOf } from 'type-fest';
+import type { Get, Promisable, KeyAsString } from 'type-fest';
 import {
   produce,
   type Draft,
@@ -6,18 +6,18 @@ import {
   applyPatches,
   enablePatches,
 } from 'immer';
-import { get, set } from '@ember/object';
+import { action, get, set } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import type {
   Changeset,
   ValidationError,
   ValidationFunction,
-} from '../types/changeset';
-import aggregatedLastChanges from '../utils/get-last-versions';
+} from '../types/changeset.ts';
+import aggregatedLastChanges from '../utils/get-last-versions.ts';
 import {
   default as ChangesetEventEmitter,
   type OnSetCallback,
-} from '../utils/event-emitter';
+} from '../utils/event-emitter.ts';
 
 enablePatches();
 
@@ -36,6 +36,8 @@ export default class ImmerChangeset<
    */
   @tracked
   data: T;
+
+  @tracked errorsCount = 1;
 
   @tracked
   private draftData: T;
@@ -112,6 +114,10 @@ export default class ImmerChangeset<
    * Applies the accumulated changes to the `data` object and sets the changeset in a pristine state. No rollback is possible after this.
    */
   save(): Promisable<void> {
+    if (!this.isValid) {
+      throw new Error('Cannot save an invalid changeset.');
+    }
+
     this.data = applyPatches(this.data, this.patches);
     this.resetPatches();
   }
@@ -135,9 +141,11 @@ export default class ImmerChangeset<
    * Adds a new `error` object to the changeset.
    * @param error The error object to add.
    */
-  addError(error: ValidationError): void {
+  @action
+  addError(error: ValidationError) {
+    this.errorsCount = this.errorsCount + 1;
     this.innerErrors = { ...this.innerErrors, [error.key]: error };
-  }
+  };
 
   /**
    * Removes the error with the specified `key` from the changeset.
@@ -173,14 +181,14 @@ export default class ImmerChangeset<
     this.draftData = produce(
       this.draftData,
       (d: Draft<T>) => {
-        set(d, key as keyof Draft<T>, value as never);
+        set(d, key as KeyAsString<Draft<T>>, value as never);
       },
       (patches, inversePatches) => {
         this.patches.push(...patches);
         this.inversePatches.push(...inversePatches);
       },
     );
-    this.eventEmitter.emitOnSet(key as StringKeyOf<T>, value as never);
+    this.eventEmitter.emitOnSet(key as KeyAsString<T>, value as never);
   }
 
   /**

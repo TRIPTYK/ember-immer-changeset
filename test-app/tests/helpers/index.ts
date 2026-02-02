@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   setupApplicationTest as upstreamSetupApplicationTest,
   setupRenderingTest as upstreamSetupRenderingTest,
@@ -10,7 +9,6 @@ import {
 // test setup functions. This way, you can easily extend the setup that is
 // needed per test type.
 
-// eslint-disable-next-line no-undef
 function setupApplicationTest(hooks: NestedHooks, options?: SetupTestOptions) {
   upstreamSetupApplicationTest(hooks, options);
 
@@ -26,7 +24,7 @@ function setupApplicationTest(hooks: NestedHooks, options?: SetupTestOptions) {
   // This is also a good place to call test setup functions coming
   // from other addons:
   //
-  // setupIntl(hooks); // ember-intl
+  // setupIntl(hooks, 'en-us'); // ember-intl
   // setupMirage(hooks); // ember-cli-mirage
 }
 
