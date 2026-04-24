@@ -4,5 +4,6 @@ packages:
 
 onlyBuiltDependencies:
   - edgedriver
+  - esbuild
   - geckodriver
   - msw
