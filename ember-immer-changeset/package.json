@@ -1,6 +1,6 @@
 {
   "name": "ember-immer-changeset",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "description": "Dummy ember V2 addon to test importation",
   "keywords": [
